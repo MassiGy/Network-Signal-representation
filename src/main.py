@@ -1,12 +1,7 @@
-#! /bin/bash
-
 
 # imports 
 from decoders.config import BINARY_CODE_EMPTY, NON_SUPPORTED_ENCODING, SUPPORTED_ENCODING
 from decoders.decoder import decoder
-
-
-
 
 
 # get usr input
@@ -28,7 +23,11 @@ if len(binary_code) == 0 :
 file = open("./signal.out.txt", "a")
 # if everything is ok, decode and write the output file.
 
-file.write(decoder(binary_code, binary_encoding))
+# write the encoding into the accumulator
+accumulator = ""
+decoder(binary_code, binary_encoding, accumulator)
+
+file.write(accumulator)
 
 file.close()
 
