@@ -1,0 +1,13 @@
+The idea behind this small project is to represent the diffrent signals that we've seen in 
+the networking course. 
+
+
+We have a set of signals, and the main goal is to be able to accept a binary representation 
+of a received signal and an encoding then generate the diagram related to that signal.
+
+
+To be simple, I've decided to just accept the signal with an  prompt call to the user, and 
+then process the binary encoding using the chosed encoding to output to a file the proper 
+signal.
+
+
