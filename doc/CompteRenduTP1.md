@@ -178,6 +178,10 @@ avec succès.
 
 
 
+
+
+
+
 ### Conclusion
 
 Durant ce projet j'ai pu approfondir ma compréhension des différents types d'encodage des trames 
