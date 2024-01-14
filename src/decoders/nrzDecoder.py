@@ -3,6 +3,19 @@ from decoders.utils import draw_extras
 from decoders.config import *
 
 def nrzDecoderUsingPloting(binary_code: str, binary_encoding: str) -> None:
+    """
+        @author Massiles GHERNAOUT
+
+        @description nrzDecoderUsingPloting 
+
+        This function will take the binary code and use ploting lib to draw its
+        signal signature to the end user's screen
+
+        This signal will be drawn following the NRZ schema, where a 1 is
+        represented by a positive voltage state and a 0 with a negative voltage
+        state
+
+    """
 
     binary_code_len = len(binary_code)
     for i in range(binary_code_len):

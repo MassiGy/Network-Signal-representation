@@ -1,4 +1,4 @@
-from decoders.config import NON_SUPPORTED_ENCODING, OUTPUTING_TO_FILE
+from decoders.config import NON_IMPLEMENTED, NON_SUPPORTED_ENCODING, OUTPUTING_TO_FILE
 from decoders.manchesterDiffDecoder import manchesterDiffDecoderUsingPloting
 from decoders.millerDecoder import millerDecoderUsingPloting
 from decoders.nrzDecoder import nrzDecoderUsingPloting
@@ -29,6 +29,12 @@ def decoder(binary_code: str, binary_encoding: str, accumulator: str) -> None:
         else :
            print("Unsupported encoding (ABORT)")
            exit(NON_SUPPORTED_ENCODING)
+    else: 
+        # plot to file
+        accumulator += "USING AN OUTPUT FILE, NO PLOTING LIB USED."
+        accumulator += "Not implemented yet (ABORT)"
+        exit(NON_IMPLEMENTED)
+        
 
 
 

@@ -19,7 +19,7 @@ def millerDecoderUsingPloting(binary_code: str, binary_encoding: str) -> None:
 
     """
 
-    binary_code_len:int= len(binary_code)
+    binary_code_len = len(binary_code)
     # assume that the signal starts at a negative voltage
     prevPoint = NEGATIVE_SPIKE
 

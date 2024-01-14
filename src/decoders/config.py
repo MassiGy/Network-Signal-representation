@@ -1,4 +1,3 @@
-
 # supported encoding global var
 SUPPORTED_ENCODING = ["NRZ", "Manchester", "Manchester Diff", "Miller"]
 
@@ -6,6 +5,7 @@ SUPPORTED_ENCODING = ["NRZ", "Manchester", "Manchester Diff", "Miller"]
 # error/exit codes
 NON_SUPPORTED_ENCODING = 1
 BINARY_CODE_EMPTY = 2
+NON_IMPLEMENTED = 3
 
 
 # plotting config

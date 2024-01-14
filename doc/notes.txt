@@ -1,0 +1,21 @@
+
+
+NRZ : (1: nV, 0: -nV, NoSignal: 0V)
+
+NRZI: complement à 1 du NRZ
+
+
+Manchester: (1: nV-> -nV, 0: -nV -> nV, NoSignal: 0V)
+Manchester en différentiel: (1: trasition en millieu du temps horloge
+                             0: trasition en début temps horloge + transition en millieu temp horloge
+                             noSignal: 0V
+        )
+
+Muller: (1: transition en millieu du temps horloge
+         0: absence de transition en millieu du temps horloge
+            + une transition au début du temps horloge si le 0 est précedé par un autre 0.
+            NoSignal: 0V
+        )
+
+
+

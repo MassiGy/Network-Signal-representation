@@ -13,9 +13,11 @@ def manchesterDiffDecoderUsingPloting(binary_code: str, binary_encoding: str) ->
 
         This signal will be drawn following the differential manchester schema,
         where a 1 is represented by a change in the signal voltage (go from one
-        pole to the other) during the following clock cycle, and a 0 is represented
-        by a former change of voltage at the start of the clock cycle followed by a
-        second volatage change during the next clock cycle.
+        pole to the other) during the following clock cycle, and a 0 is
+        represented by a former change of voltage at the start of the next
+        clock cycle followed by a second volatage change during the next clock
+        cycle.
+
     """
 
     binary_code_len:int= len(binary_code)

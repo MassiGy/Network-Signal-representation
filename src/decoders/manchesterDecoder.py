@@ -3,6 +3,21 @@ from decoders.utils import draw_extras
 from decoders.config import *
 
 def manchesterDecoderUsingPloting(binary_code: str, binary_encoding: str) -> None:
+    """
+        @author Massiles GHERNAOUT
+
+        @description manchesterDecoderUsingPloting 
+
+        This function will take the binary code and use ploting lib to draw its
+        signal signature to the end user's screen
+
+        This signal will be drawn following the manchester schema, where a 1 is
+        represented by a transition from positive to negative voltage state, and 
+        where a 0 is represented by a transition from a negative to a positive 
+        voltage state. So if two similar bits are in sequence a voltage change 
+        will occur just before the next clock cycle
+
+    """
 
     binary_code_len = len(binary_code)
     for i in range(binary_code_len):
