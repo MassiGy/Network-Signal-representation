@@ -1,4 +1,3 @@
-from enum import Enum
 import matplotlib.pyplot as mplot
 from decoders.utils import draw_extras 
 from decoders.config import *
@@ -7,9 +6,10 @@ def manchesterDiffDecoderUsingPloting(binary_code: str, binary_encoding: str) ->
     """
         @author Massiles GHERNAOUT
 
-        @description manchesterDiffDecoderUsingPloting This function will take the
-        binary code and use ploting lib to draw its signal signature to the end
-        user's screen
+        @description manchesterDiffDecoderUsingPloting 
+
+        This function will take the binary code and use ploting lib to draw its
+        signal signature to the end user's screen
 
         This signal will be drawn following the differential manchester schema,
         where a 1 is represented by a change in the signal voltage (go from one

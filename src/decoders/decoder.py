@@ -1,10 +1,12 @@
-from decoders.config import OUTPUTING_TO_FILE
+from decoders.config import NON_SUPPORTED_ENCODING, OUTPUTING_TO_FILE
 from decoders.manchesterDiffDecoder import manchesterDiffDecoderUsingPloting
+from decoders.millerDecoder import millerDecoderUsingPloting
 from decoders.nrzDecoder import nrzDecoderUsingPloting
 from decoders.manchesterDecoder import manchesterDecoderUsingPloting
 
 
-# SUPPORTED_ENCODING = ["NRZ", "NRZI", "Manchester", "Manchester Diff", "Miller"]
+
+# SUPPORTED_ENCODING = ["NRZ", "Manchester", "Manchester Diff", "Miller"]
 def decoder(binary_code: str, binary_encoding: str, accumulator: str) -> None:
 
     if OUTPUTING_TO_FILE == False : 
@@ -19,14 +21,15 @@ def decoder(binary_code: str, binary_encoding: str, accumulator: str) -> None:
             manchesterDecoderUsingPloting(binary_code, binary_encoding)
 
         elif binary_encoding == "Manchester Diff":
-            # TODO 
             manchesterDiffDecoderUsingPloting(binary_code, binary_encoding)
+
         elif binary_encoding == "Miller": 
-            # TODO 
-            print("todo")
+            millerDecoderUsingPloting(binary_code, binary_encoding)
+
         else :
-            # TODO
-            print("todo")
+           print("Unsupported encoding (ABORT)")
+           exit(NON_SUPPORTED_ENCODING)
+
 
 
 

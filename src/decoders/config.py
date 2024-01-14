@@ -1,6 +1,6 @@
 
 # supported encoding global var
-SUPPORTED_ENCODING = ["NRZ", "NRZI", "Manchester", "Manchester Diff", "Miller"]
+SUPPORTED_ENCODING = ["NRZ", "Manchester", "Manchester Diff", "Miller"]
 
 
 # error/exit codes

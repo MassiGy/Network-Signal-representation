@@ -9,7 +9,6 @@ binary_encoding = str(input("Please enter encoding format (respect case) " + str
 
 if binary_encoding not in SUPPORTED_ENCODING:
     print("Unsupported encoding (ABORT)")
-    print("Supported encoding are: ", )
     exit(NON_SUPPORTED_ENCODING)
 
 if len(binary_code) == 0 : 
