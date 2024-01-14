@@ -21,15 +21,17 @@ def manchesterDiffDecoderUsingPloting(binary_code: str, binary_encoding: str) ->
     """
 
     binary_code_len:int= len(binary_code)
-    prevPoint = NOSIGNAL_SPIKE
+
+    # assume that the previous point 
+    # was on a negative charge
+    prevPoint = NEGATIVE_SPIKE
 
     for i in range(binary_code_len):
         draw_extras(i, binary_encoding)
 
         if binary_code[i] == str(POSITIVE_SPIKE):
 
-            if prevPoint == NOSIGNAL_SPIKE:
-                # first entrence
+            if prevPoint == NEGATIVE_SPIKE:
                 # just go from a pole to another
 
                 # draw a line at the buttom from the start to the middle
@@ -59,26 +61,6 @@ def manchesterDiffDecoderUsingPloting(binary_code: str, binary_encoding: str) ->
                 # update the previous point
                 prevPoint = NEGATIVE_SPIKE
 
-
-            elif prevPoint == NEGATIVE_SPIKE:
-                # switch from pole to another
-
-                # draw a line from the start to the middle at the buttom
-                mplot.plot([i,i+0.5], [-1,-1], color=FG_LINES_COLOR,linestyle="-", linewidth=FG_LINES_WIDTH)
-
-                # draw a line from the buttom to the top at the middle
-                mplot.plot([i+0.5, i+0.5+EPSILON], [-1,1], color=FG_LINES_COLOR,linestyle="-", linewidth=FG_LINES_WIDTH)
-
-                # draw a line at the top from the middle to the end
-                mplot.plot([i+0.5+EPSILON, i+1], [1,1], color=FG_LINES_COLOR,linestyle="-", linewidth=FG_LINES_WIDTH)
-
-                # update the previous point
-                prevPoint = POSITIVE_SPIKE
-
-
-            else: 
-                # illegal state
-                raise Exception("illegal state")
 
         elif binary_code[i] == str(NEGATIVE_SPIKE):
             # we need a former voltage change before the clock cycle then
